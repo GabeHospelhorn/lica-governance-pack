@@ -9,6 +9,7 @@ This repository binds:
 - quality management controls
 - incident handling
 - board-visible decision cadence
+- ..
 
 ## Core structure
 - `evidence/lica_crosswalk.csv` — decision-to-evidence crosswalk
