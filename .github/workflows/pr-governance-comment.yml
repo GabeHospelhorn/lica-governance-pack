@@ -1,0 +1,47 @@
+name: PR Governance Comment
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  governance-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get changed files
+        id: changed
+        uses: tj-actions/changed-files@v44
+
+      - name: Run LICA governance check
+        id: lica
+        run: |
+          python ci/check_lica_evidence.py ${{ steps.changed.outputs.all_changed_files }}
+
+      - name: Comment on PR
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = [
+              "## LICA Governance Report",
+              "",
+              `Status: **${{ steps.lica.outcome }}**`,
+              "",
+              "Checked for presence of core LICA artifacts when governed areas change.",
+              "",
+              "- evidence/lica_crosswalk.csv",
+              "- schemas/incident_schema.json",
+              "- templates/bv01_memo.md"
+            ].join("\\n");
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
