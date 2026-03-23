@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#101418"/>
+  <g fill="none" stroke="#d8e1e8" stroke-width="3">
+    <rect x="60" y="110" width="140" height="60" rx="12"/>
+    <rect x="250" y="110" width="140" height="60" rx="12"/>
+    <rect x="440" y="110" width="180" height="60" rx="12"/>
+    <rect x="680" y="110" width="220" height="60" rx="12"/>
+    <rect x="960" y="110" width="160" height="60" rx="12"/>
+    <line x1="200" y1="140" x2="250" y2="140"/>
+    <line x1="390" y1="140" x2="440" y2="140"/>
+    <line x1="620" y1="140" x2="680" y2="140"/>
+    <line x1="900" y1="140" x2="960" y2="140"/>
+  </g>
+  <g fill="#d8e1e8" font-family="Arial, Helvetica, sans-serif">
+    <text x="95" y="145" font-size="24">CommOS</text>
+    <text x="295" y="145" font-size="24">CASL</text>
+    <text x="485" y="145" font-size="22">LICA Triage</text>
+    <text x="710" y="145" font-size="22">Tribunal / BV-01</text>
+    <text x="990" y="145" font-size="22">LC-01</text>
+    <text x="60" y="55" font-size="34">LICA — Decision to Evidence Crosswalk</text>
+    <text x="60" y="620" font-size="22">Every decision must have a receipt.</text>
+  </g>
+</svg>

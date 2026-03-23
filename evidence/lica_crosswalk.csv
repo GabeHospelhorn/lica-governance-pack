@@ -1,0 +1,5 @@
+lane,decision_id,annex_iv_artifact,annex_iv_ref,article_17_clause,nist_rmf_subcategory,owner,evidence_url,status,last_updated
+data_rights,DR-001,data_governance_log,AnnexIV-2(a),17(1)(a),GOV-1,General Counsel,/evidence/dr_001.pdf,active,2026-03-23
+model_risk,MR-003,validation_protocol,AnnexIV-2(c),17(1)(c),MEASURE-2,Chief Medical Officer,/evidence/mr_003.pdf,active,2026-03-23
+safety_clinical,SC-002,post_market_plan,AnnexIV-3,17(1),MANAGE-1,Chief Medical Officer,/evidence/sc_002.pdf,active,2026-03-23
+cyber_supply,CS-004,sbom_log,AnnexIV-4,17(1),MANAGE-3,Chief Technology Officer,/evidence/cs_004.pdf,active,2026-03-23
